@@ -1,19 +1,25 @@
-  let imageName1 = document.getElementById("the-edge");
+let images = document.getElementsByTagName("img");
+console.log(images)
 
-  imageName1.onclick = function(element) {
+for (var i = 0; i < images.length; i++) {
+    images[i].onclick = function (event) {
+        // Create the link to be copied
+        hyperlink = event.target.alt //EVENT.TARGET = ELEMENT
 
-  	// Create the link to be copied
-    hyperlink = imageName1.alt
-    imgOpen = "[img]"
-    imgClose = "[/img]"
-    link = imgOpen.concat(hyperlink, imgClose)
+        imgOpen = "[img]"
+        imgClose = "[/img]"
+        link = imgOpen.concat(hyperlink, imgClose)
+        console.log(link)
 
-    // Create a dummy TextArea to copy text 
-    var dummy = document.createElement("textarea")
-    document.body.appendChild(dummy)
-    dummy.value = link
-    dummy.select()
 
-    document.execCommand("copy")
-    document.body.removeChild(dummy)
-  };
+        // Create a dummy TextArea to copy text 
+        var dummy = document.createElement("textarea")
+        document.body.appendChild(dummy)
+        dummy.value = link
+        dummy.select()
+
+        document.execCommand("copy")
+        document.body.removeChild(dummy)
+
+    }
+}
