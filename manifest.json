@@ -1,5 +1,6 @@
   {
     "name": "Misc GIFs",
+    "title": "Misc GIFs",
     "version": "1.0",
     "description": "Your favorite images in one place!",
     "permissions": ["declarativeContent", "storage"],
