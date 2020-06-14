@@ -2,5 +2,25 @@
     "name": "Misc GIFs",
     "version": "1.0",
     "description": "Your favorite images in one place!",
+    "permissions": ["declarativeContent", "storage"],
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    },
+    "page_action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "images/b-logo16.png",
+        "32": "images/b-logo32.png",
+        "48": "images/b-logo48.png",
+        "128": "images/b-logo128.png"
+      }
+    },
+    "icons": {
+      "16": "images/b-logo16.png",
+      "32": "images/b-logo32.png",
+      "48": "images/b-logo48.png",
+      "128": "images/b-logo128.png"
+    },
     "manifest_version": 2
   }
